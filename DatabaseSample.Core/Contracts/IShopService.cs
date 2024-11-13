@@ -9,9 +9,16 @@ namespace DatabaseSample.Core.Contracts
 {
     public interface IShopService
     {
+        //Products
         List<Product> GetAllProducts();
         Product GetProductById(int id);
         void AddProduct(Product product);
         void RemoveProductById(int id);
+
+        //Customers
+        List<Customer> GetAllCustomers();
+        Customer GetCustomerById(int id);
+        void AddCustomer(Customer customer);
+        void RemoveCustomerById(int id);
     }
 }

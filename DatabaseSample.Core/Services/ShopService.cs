@@ -17,9 +17,19 @@ namespace DatabaseSample.Core.Services
             _shopRepository = shopRepository;
         }
 
+        public void AddCustomer(Customer customer)
+        {
+            _shopRepository.AddCustomer(customer);
+        }
+
         public void AddProduct(Product product)
         {
             _shopRepository.AddProduct(product);
+        }
+
+        public List<Customer> GetAllCustomers()
+        {
+            return _shopRepository.GetAllCustomers();
         }
 
         public List<Product> GetAllProducts()
@@ -27,9 +37,19 @@ namespace DatabaseSample.Core.Services
             return _shopRepository.GetAllProducts();
         }
 
+        public Customer GetCustomerById(int id)
+        {
+            return _shopRepository.GetCustomerById(id);
+        }
+
         public Product GetProductById(int id)
         {
             return _shopRepository.GetProductById(id);
+        }
+
+        public void RemoveCustomerById(int id)
+        {
+            _shopRepository.RemoveCustomerById(id);
         }
 
         public void RemoveProductById(int id)
